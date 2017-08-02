@@ -1,0 +1,23 @@
+{
+  "name": "electron-pics",
+  "version": "0.1.0",
+  "description": "Electron app to visualize pictures",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "electron"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bntzio/electron-pics.git"
+  },
+  "author": "Enrique Benitez <hello@bntz.io> (bntz.io)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bntzio/electron-pics/issues"
+  },
+  "homepage": "https://github.com/bntzio/electron-pics#readme",
+  "dependencies": {
+    "electron": "^1.6.11"
+  }
+}
