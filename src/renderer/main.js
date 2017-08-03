@@ -1,9 +1,11 @@
 import url from 'url'
 import path from 'path'
+import applyFilter from './filters'
 
 window.addEventListener('load', () => {
   addImagesEvent()
   searchImagesEvent()
+  selectEvent()
 })
 
 function addImagesEvent () {
@@ -55,4 +57,11 @@ function searchImagesEvent () {
 function selectFirstImage () {
   const image = document.querySelector('li.list-group-item:not(.hidden)')
   changeImage(image)
+}
+
+function selectEvent () {
+  const select = document.getElementById('filters')
+  select.addEventListener('change', function () {
+    applyFilter(this.value, document.getElementById('image-displayed'))
+  })
 }
