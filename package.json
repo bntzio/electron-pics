@@ -2,11 +2,11 @@
   "name": "electron-pics",
   "version": "0.1.0",
   "description": "Electron app to visualize pictures",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "standard",
-    "dev": "cross-env NODE_ENV=development electron src/index.js"
+    "dev": "cross-env NODE_ENV=development electron ."
   },
   "repository": {
     "type": "git",

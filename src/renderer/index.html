@@ -5,13 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Electron Pics 🖼️</title>
+  <link rel="stylesheet" href="../assets/css/photon.min.css" />
   <link rel="stylesheet" href="../assets/css/main.css" />
   <script src="main.js"></script>
 </head>
 <body>
-  <div>
-    <h1>Hello there!! 😄</h1>
-    <p id="message"></p>
+  <div class="window">
+    <div class="window-content">
+      <div class="pane-group">
+        <div class="pane pane-sm sidebar">
+          <ul class="list-group">
+            <li class="list-group-header">
+              <input class="form-control" type="text" placeholder="Search for someone">
+            </li>
+            <li class="list-group-item">
+              <img class="media-object pull-left" src="../assets/images/1.jpg" width="52" height="32">
+              <div class="media-body">
+                <strong>1.jpg</strong>
+                <p>2 MB</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <img class="media-object pull-left" src="../assets/images/2.jpg" width="52" height="32">
+              <div class="media-body">
+                <strong>2.jpg</strong>
+                <p>1.8 MB</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <img class="media-object pull-left" src="../assets/images/3.jpg" width="52" height="32">
+              <div class="media-body">
+                <strong>3.jpg</strong>
+                <p>2.2 MB</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <img class="media-object pull-left" src="../assets/images/4.jpg" width="52" height="32">
+              <div class="media-body">
+                <strong>4.jpg</strong>
+                <p>1 MB</p>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <img class="media-object pull-left" src="../assets/images/5.jpg" width="52" height="32">
+              <div class="media-body">
+                <strong>5.jpg</strong>
+                <p>1.4 MB</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="pane">
+          <div class="image-view full-height">
+            <header class="toolbar toolbar-header image-toolbar">
+              <div class="toolbar-actions">
+                <div class="btn-group">
+                  <button class="btn btn-default">
+                    <span class="icon icon-folder icon-text"></span>
+                    Open Directory
+                  </button>
+                </div>
+                <button class="btn btn-default pull-right">
+                  <span class="icon icon-download icon-text"></span>
+                  Save Image
+                </button>
+                <select id="filters" class="pull-right">
+                  <option selected value="none">None</option>
+                  <option value="sepia">Sepia</option>
+                  <option value="black-and-white">Black and White</option>
+                </select>
+                <label for="filters" class="filter-label pull-right">Filters:</label>
+              </div>
+            </header>
+            <div class="image-container">
+              <img id="image-displayed" src="../assets/images/1.jpg" alt="" />
+            </div>
+          </div>
+      </div>
+    </div>
+    <footer class="toolbar toolbar-footer">
+      <h1 class="title">Footer</h1>
+    </footer>
   </div>
 </body>
 </html>
