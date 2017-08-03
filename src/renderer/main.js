@@ -17,9 +17,13 @@ function addImagesEvent () {
 }
 
 function changeImage (node) {
-  document.querySelector('li.selected').classList.remove('selected')
-  node.classList.add('selected')
-  document.getElementById('image-displayed').src = node.querySelector('img').src
+  if (node) {
+    document.querySelector('li.selected').classList.remove('selected')
+    node.classList.add('selected')
+    document.getElementById('image-displayed').src = node.querySelector('img').src
+  } else {
+    document.getElementById('image-displayed').src = ''
+  }
 }
 
 function searchImagesEvent () {
@@ -27,7 +31,7 @@ function searchImagesEvent () {
 
   searchBox.addEventListener('keyup', function () {
     const regex = new RegExp(this.value.toLowerCase(), 'gi')
-    if (this.value > 0) {
+    if (this.value.length > 0) {
       const thumbs = document.querySelectorAll('li.list-group-item img')
       thumbs.forEach(thumb => {
         const fileURL = url.parse(thumb.src)
@@ -40,9 +44,9 @@ function searchImagesEvent () {
       })
       selectFirstImage()
     } else {
-      const thumbs = document.querySelectorAll('li.list-group-item img')
-      thumbs.forEach(thumb => {
-        thumb.parentNode.classList.remove('hidden')
+      const hiddenThumbs = document.querySelectorAll('li.hidden')
+      hiddenThumbs.forEach(hiddenThumb => {
+        hiddenThumb.classList.remove('hidden')
       })
     }
   })
